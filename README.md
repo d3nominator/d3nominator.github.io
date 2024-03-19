@@ -1,4 +1,4 @@
-## Rishabh Kumar Pandey's Page 
+
 ## Links 
   1. [Linkedin](https://www.linkedin.com/in/d3nominator)
   2. [Twitter](https://twitter.com/d3nominator)

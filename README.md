@@ -4,7 +4,7 @@
   2. [Twitter](https://twitter.com/d3nominator)
 
 ###  About
-  Hi, I am Rishabh. I like to learn and build new stuff.
+  Hi, I am Rishabh. I like to learn and build new stuff. \n
   My interests include ML,Competitive Programming,finance,anime and marvel movies.
 
 ### Currently

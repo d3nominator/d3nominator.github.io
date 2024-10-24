@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rishabh Kumar Pandey - Personal Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #60a5fa;
+            --text-color: #e5e7eb;
+            --bg-color: #111827;
+            --card-bg: #1f2937;
+            --nav-bg: #0f172a;
+            --hover-color: #93c5fd;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        nav {
+            background-color: var(--nav-bg);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;
+        }
+
+        .nav-name {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: var(--hover-color);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 5rem 1rem 2rem 1rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .profile-name {
+            font-size: 2.5rem;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            margin: 1.5rem 0;
+        }
+
+        .social-links a {
+            color: var(--text-color);
+            margin: 0 1rem;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-color);
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            color: var(--text-color);
+            margin: 1rem 0;
+            font-size: 1.25rem;
+        }
+
+        .experience-item, .education-item, .project-item {
+            margin-bottom: 2rem;
+        }
+
+        .date {
+            color: #9ca3af;
+            font-size: 0.9rem;
+        }
+
+        ul {
+            list-style-position: inside;
+            margin: 1rem 0;
+            color: #d1d5db;
+        }
+
+        li {
+            margin: 0.5rem 0;
+        }
+
+        .menu-button {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .menu-button {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: var(--nav-bg);
+                flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .container {
+                padding-top: 4rem;
+            }
+
+            .profile-name {
+                font-size: 2rem;
+            }
+        }
+
+        /* Subtle hover effects */
+        section:hover {
+            transform: translateY(-2px);
+            transition: transform 0.3s ease;
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-color);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-name">RKP</div>
+            <button class="menu-button" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#projects">Projects</a>
+                <a href="#achievements">Achievements</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1 class="profile-name">Rishabh Kumar Pandey</h1>
+            <p>Software Developer - Quant and Algo Team</p>
+            <div class="social-links">
+                <a href="https://github.com/d3nominator" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/d3nominator/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:rishabhpandey7681@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </header>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I'm a Software Developer specializing in Quantitative Research and Algorithm Development. With a strong foundation in Electronics and Communication Engineering from VIT Vellore, I combine technical expertise with practical experience in developing trading tools and algorithms.</p>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>Software Developer - Quant and Algo Team</h3>
+                <p class="date">Futures First Info Services Pvt. Ltd | July 2024 - Present</p>
+                <ul>
+                    <li>Implementation and integration of alerts and trading indicators</li>
+                    <li>Integration of Historical and Live trading data visualization charts</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3>Quantitative Research and Algorithm Developer Intern</h3>
+                <p class="date">Futures First Info Services Pvt. Ltd | Jan 2024 - Jul 2024</p>
+                <ul>
+                    <li>Designed and implemented trading data visualization tools</li>
+                    <li>Orchestrated PnL calculations and trading indicators integration</li>
+                    <li>Engineered automated data extraction framework using Flask</li>
+                    <li>Developed custom market screener application</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Vellore Institute of Technology</h3>
+                <p>B.Tech in Electronics and Communication</p>
+                <p class="date">CGPA: 8.16 | Aug 2020 - May 2024</p>
+            </div>
+            <div class="education-item">
+                <h3>VidyaGyan School</h3>
+                <p>Class 12, PCM + Economics</p>
+                <p class="date">Grade: 95% | Aug 2018 - May 2020</p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-item">
+                <h3>Character Level Language Model</h3>
+                <p>Python, PyTorch, Pandas, NumPy</p>
+                <ul>
+                    <li>Implemented character-level language model using MLP architecture</li>
+                    <li>Trained model on name dataset with optimized hyperparameters</li>
+                    <li>Evaluated performance using cross-entropy function</li>
+                </ul>
+            </div>
+            <div class="project-item">
+                <h3>Harmonic Pattern Recognition</h3>
+                <p>Python, NumPy, Pandas, Plotly</p>
+                <ul>
+                    <li>Developed model for detecting Harmonic patterns in market data</li>
+                    <li>Created custom trading strategies based on pattern recognition</li>
+                    <li>Backtested model on Bitcoin data for strategy optimization</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="achievements">
+            <h2>Achievements</h2>
+            <ul>
+                <li>Shiv Nadar Foundation Scholarship recipient (Grade 6-12 and Undergraduate)</li>
+                <li>ACM ICPC regionals competitive programming competition representative - VIT Vellore (2023-24)</li>
+                <li>CodeChef: 3 stars (max rating 1732) | CodeForces: Pupil (rating 1337)</li>
+                <li>Global rank 1170 in TCS CodeVita season 11</li>
+                <li>Selected for Amazon Machine Learning Summer School Program - 2023</li>
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navLinks = document.getElementById('nav-links');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
